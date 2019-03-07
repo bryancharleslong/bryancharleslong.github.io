@@ -13,18 +13,29 @@ body {
 	max-width: 90%;
 	width: 1200px;
 	background-color: #FFCC99;
+	min-width: 395px;
 }
 
 header {
 	color: #003366;
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
+	align-items: flex-start;
 	margin: 0 1rem;
 }
 .header-left{
 	display:flex;
 	flex-direction: column;
+}
+.email{
+	display: flex;
+	align-items: center;
+}
+header .fa-envelope{
+	margin-right: .5rem;
+}
+header .fa-mobile-alt{
+	margin-right: .5rem;
 }
 
 header ul {
@@ -39,11 +50,38 @@ nav .nav-link{
 .nav-link {
 	text-decoration: none;
 	color: #003366;
+	white-space: nowrap;
 }
 
 .nav-link:hover {
 	font-weight: bold;
 }
+.hamburger {
+	display: none;
+}
+@media screen and (max-width: 768px){
+	header{
+		margin-right: 0;
+	}
+	nav ul{
+		display: none;
+	}
+	.hamburger {
+		float:right;
+		display: block;
+		color:#003366; 
+		text-decoration: none;
+	}
+	.hamburger:hover {
+		background-color: #FF9966;
+	}
+	.topnav.responsive ul {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
 
 main {
 	color: #003366;
@@ -79,6 +117,9 @@ main {
 	grid-gap: 2rem;
 	margin: 0 3%;
 }
+
+
+
 .project-image{
 	display:flex;
 	justify-content: center;
@@ -95,20 +136,23 @@ main {
 	text-decoration: none;
 	color: #003366;
 }
+
 .project-link:hover{
 	text-decoration: underline;
 }
 
-#image-center:hover {
-	transform: scale(3);
-}
+@media screen and (min-width: 768px){
+	#image-center:hover {
+		transform: scale(3);
+	}
 
-#image-left:hover {
-	transform: scale(2) translate(20%);
-}
+	#image-left:hover {
+		transform: scale(2) translate(20%);
+	}
 
-#image-right:hover {
-	transform: scale(2) translate(-20%);
+	#image-right:hover {
+		transform: scale(2) translate(-20%);
+	}
 }
 
 .projects article {
@@ -118,6 +162,8 @@ main {
 	background:rgba(51, 153, 255, .8);
 	border-radius: 5%;
 }
+
+
 article h3{
 	margin:auto;
 }
@@ -231,4 +277,32 @@ footer {
 	padding:1rem 2rem;
 	font-size: .8rem;
 	color: #003366
+}
+
+@media screen and (max-width: 768px) {
+  .projects  {
+  	display:flex;
+  	flex-direction: column;
+  }
+  .projects article {
+  	margin-bottom: 2rem;
+  }
+  .about-me{
+  	display:flex;
+  	flex-direction: column;
+  }
+  .bio{
+  	padding: 7%;
+  }
+  .social-links{
+  	display:flex;
+  	justify-content: center;
+  }
+  .social-link{
+  	padding: 0;
+  	padding-top: 3rem;
+  }
+  .social-link:hover .link{
+  	opacity: 0;
+  }
 }
