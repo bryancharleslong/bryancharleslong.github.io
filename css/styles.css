@@ -26,6 +26,16 @@ header {
 	display:flex;
 	flex-direction: column;
 }
+.email{
+	display: flex;
+	align-items: center;
+}
+header .fa-envelope{
+	margin-right: .5rem;
+}
+header .fa-mobile-alt{
+	margin-right: .5rem;
+}
 
 header ul {
 	display: flex;
@@ -79,6 +89,9 @@ main {
 	grid-gap: 2rem;
 	margin: 0 3%;
 }
+
+
+
 .project-image{
 	display:flex;
 	justify-content: center;
@@ -118,6 +131,8 @@ main {
 	background:rgba(51, 153, 255, .8);
 	border-radius: 5%;
 }
+
+
 article h3{
 	margin:auto;
 }
@@ -231,4 +246,32 @@ footer {
 	padding:1rem 2rem;
 	font-size: .8rem;
 	color: #003366
+}
+
+@media screen and (max-width: 768px) {
+  .projects  {
+  	display:flex;
+  	flex-direction: column;
+  }
+  .projects article {
+  	margin-bottom: 2rem;
+  }
+  .about-me{
+  	display:flex;
+  	flex-direction: column;
+  }
+  .bio{
+  	padding: 7%;
+  }
+  .social-links{
+  	display:flex;
+  	justify-content: center;
+  }
+  .social-link{
+  	padding: 0;
+  	padding-top: 3rem;
+  }
+  .social-link:hover .link{
+  	opacity: 0;
+  }
 }
