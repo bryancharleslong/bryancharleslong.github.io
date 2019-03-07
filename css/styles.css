@@ -13,13 +13,14 @@ body {
 	max-width: 90%;
 	width: 1200px;
 	background-color: #FFCC99;
+	min-width: 395px;
 }
 
 header {
 	color: #003366;
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
+	align-items: flex-start;
 	margin: 0 1rem;
 }
 .header-left{
@@ -49,11 +50,38 @@ nav .nav-link{
 .nav-link {
 	text-decoration: none;
 	color: #003366;
+	white-space: nowrap;
 }
 
 .nav-link:hover {
 	font-weight: bold;
 }
+.hamburger {
+	display: none;
+}
+@media screen and (max-width: 768px){
+	header{
+		margin-right: 0;
+	}
+	nav ul{
+		display: none;
+	}
+	.hamburger {
+		float:right;
+		display: block;
+		color:#003366; 
+		text-decoration: none;
+	}
+	.hamburger:hover {
+		background-color: #FF9966;
+	}
+	.topnav.responsive ul {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
 
 main {
 	color: #003366;
@@ -108,20 +136,23 @@ main {
 	text-decoration: none;
 	color: #003366;
 }
+
 .project-link:hover{
 	text-decoration: underline;
 }
 
-#image-center:hover {
-	transform: scale(3);
-}
+@media screen and (min-width: 768px){
+	#image-center:hover {
+		transform: scale(3);
+	}
 
-#image-left:hover {
-	transform: scale(2) translate(20%);
-}
+	#image-left:hover {
+		transform: scale(2) translate(20%);
+	}
 
-#image-right:hover {
-	transform: scale(2) translate(-20%);
+	#image-right:hover {
+		transform: scale(2) translate(-20%);
+	}
 }
 
 .projects article {
