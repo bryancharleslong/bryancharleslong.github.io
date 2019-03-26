@@ -86,7 +86,9 @@ nav .nav-link{
 main {
 	color: #003366;
 }
-
+h1{
+	margin:0;
+}
 .hero {
 	background-image: url("../images/board.jpg");
 	background-size: cover;
@@ -99,6 +101,7 @@ main {
 	align-items: center;
 	font-size: 2rem;
 }
+
 .hero-text{
 	text-decoration: none;
 	color:#FF9966;
