@@ -160,12 +160,15 @@ h1{
 
 .projects article {
 	display:grid;
-	grid-template-rows: 1fr 2.5fr .2fr 2.5fr;
+	grid-template-rows;
 	box-shadow: 4px 6px 5px 5px rgba(122, 113, 122, 1);
 	background:rgba(51, 153, 255, .8);
 	border-radius: 5%;
 }
 
+article a {
+	text-align: center;
+}
 
 article h3{
 	margin:auto;
